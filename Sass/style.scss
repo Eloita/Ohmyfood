@@ -1,0 +1,56 @@
+$backgroung-color-header : #EAEAEA;
+$dark-background-font-color : #353535;
+$background-color-main: #F6F6F6;
+$style-color-first : #9356DC;
+$style-color-second : #ff79da; 
+$color-nouveau-restaurant : #008766;
+$icone-colour: #7E7E7E;
+
+@mixin flex-center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin style-color{
+    background: linear-gradient(to bottom, $style-color-second, $style-color-first);
+}
+@mixin shadow-header : ;
+
+
+ * {
+        font-family: 'Roboto', sans-serif;
+    } ;
+
+header {
+    @include flex-center;
+
+    p {
+    background : $color-background-header;
+        i {
+        color : $dark-background-font-color;
+        }
+    }
+
+}
+
+.bouton-gradient {
+    @include style-color;
+    background: linear-gradient(to bottom, $style-color-first, $style-color-second);
+    color: #ffffff; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 25px;
+     /* 
+    cursor: pointer; // Curseur pointeur au survol
+    transition: background 0.3s ease; // Transition douce lors du survol
+      & : hover {
+
+        }*/
+}
+
+
+footer {
+    color: #ffffff;
+    background : $dark-background-font-color;
+    padding: 25px; 
+}
