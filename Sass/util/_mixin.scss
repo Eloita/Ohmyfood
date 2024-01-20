@@ -1,0 +1,19 @@
+@mixin style-color{
+    background: linear-gradient(to bottom, $style-color-second, $style-color-first);
+}
+
+@mixin flex-center {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin shadow {
+    margin: 0px 0px 5px 0px;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin lien {
+        color: inherit;
+        text-decoration: none;
+}

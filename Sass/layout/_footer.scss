@@ -1,0 +1,32 @@
+/*@use'../index' as *;
+
+footer {
+    color: $background-white;
+    background-color : $dark-grey;
+    padding: 25px; 
+}
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: left;
+    background-color :grey;
+        img {
+            width :15px;
+            height : 15px;
+            padding:15px;
+            color:$color-white;
+        }
+        ul{  
+            color:$color-white;
+        }
+        a{
+            @include lien;
+            font-family: $font-p;
+            
+        }
+        span {
+            color:$color-white;
+            padding-right : 17px;
+        }
+}
