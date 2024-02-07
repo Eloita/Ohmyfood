@@ -1,0 +1,226 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Définition des variables
+$taille-logo: 30px; // Taille du logo
+$espace-logo-titre: 10px; // Espacement entre le logo et le titre
+
+// Style de la carte
+.card {
+    width: 80%; // Largeur de la carte
+    border-radius: 20px;
+    padding: 5px;
+    filter : drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    overflow: hidden; // Masquer le débordement
+
+    .card img{
+        object-fit: cover;
+    }
+}
+
+    // Style du contenu textuel
+    .content {
+        padding: 15px; // Espacement intérieur
+    }
+
+    // Style du titre
+    .title {
+        font-size: 18px; // Taille de la police du titre
+        font-weight: bold; // Gras
+        margin-bottom: 5px; // Marge en bas du titre
+
+        // Style du logo à droite du titre
+        .logo {
+            width: $taille-logo; // Taille du logo
+            margin-left: $espace-logo-titre; // Espacement entre le logo et le titre
+            vertical-align: middle; // Alignement vertical au milieu
+        }
+    }
+
+    // Style du sous-titre
+    .subtitle {
+        font-size: 14px; // Taille de la police du sous-titre
+        color: #777; // Couleur grise
+    }
+*/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-items: center;
+}
+header h1 {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 55px;
+  text-align: center;
+  margin: 0px 0px 5px 0px;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: "Shrikhand", serif;
+  font-size: 1.875rem;
+}
+header p {
+  background-color: #EAEAEA;
+  text-align: center;
+  width: 100%;
+  padding: 14px 0px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+header span {
+  color: #353535;
+  padding-right: 17px;
+}
+
+@media (min-width: 1024px) {
+  header h1 {
+    padding: 0px;
+    height: 80px;
+  }
+}
+footer {
+  color: #ffffff;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: left;
+  width: 100%;
+}
+footer h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  padding: 22px 22px 0px 22px;
+}
+footer ul {
+  padding: 18px;
+}
+footer li {
+  font-size: 16px;
+  padding-top: 7px;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+footer span {
+  padding-right: 17px;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: end;
+    padding: 25px 0px;
+    gap: 60px;
+    margin: 0px;
+  }
+  footer h2 {
+    padding-right: 60px;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 13px;
+  }
+  footer li {
+    font-weight: 200;
+  }
+  footer .link li:nth-child(-n+2) {
+    font-weight: 600;
+  }
+  footer .link li:nth-child(1) + li {
+    margin-right: 35px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    justify-content: center;
+    gap: 15px;
+  }
+  footer h2 {
+    justify-content: center;
+    align-content: center;
+    padding: 0px;
+    display: flex;
+    align-items: baseline;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 18px;
+  }
+  footer .link li:nth-child(n+3) {
+    font-style: italic;
+  }
+  footer span {
+    padding-right: 7px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
