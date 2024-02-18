@@ -3,34 +3,90 @@
 footer {
     color: $color-white;
     background-color : $dark-grey;
-    padding: 25px; 
-}
-footer{
     display:flex;
     flex-direction: column;
     justify-content: start;
     align-items: left;
-    background-color :$dark-grey;
-    padding: 22px 25px;
-        h2{
+    width: 100%;
+    
+        h2{ 
             font-family: $font-title;
-            font-size: 25px;
-            padding-bottom :16px ; 
+            font-size: 18px;
+            padding: 22px 22px 0px 22px;
         }
-        
-        ul{  
+        ul{
+            padding: 18px;
+        }
             li {
                 font-size: $size-p ;
                 padding-top: 7px;
-            }
-        }
-        a{
-            @include lien;
-            font-family: $font-p;
-            
+                }
+
+        a {
+            @include lien ;
+            font-family : $font-p;
         }
         span {
-            color:$color-white;
-            padding-right : 17px;
+            padding-right : 17px;   
         }
+}
+
+@media (min-width: $desktop) {
+   footer {
+        display : flex;
+        flex-direction : row-reverse;
+        align-items : flex-end;
+        justify-content: end;
+        padding : 25px 0px;
+        gap : 60px;
+        margin:0px;
+  
+       h2 {
+            padding-right : 60px ; 
+        }
+        ul { 
+            display: flex;
+            flex-direction: row;
+            padding: 0px;
+            gap : 13px;
+    }
+    li { 
+        font-weight: 200;
+    }
+    
+    .link li:nth-child(-n+2){
+        font-weight: 600; 
+        }
+    .link li:nth-child(1) + li {
+        margin-right: 35px;
+    }
+   }
+}
+
+@media (min-width: $tablet) and (max-width:$desktop) {
+   footer { 
+        display : flex;
+        flex-direction : row-reverse;
+        align-items : baseline;
+        justify-content: center;
+        gap : 15px;
+        
+    h2 {
+        justify-content: center;
+        align-content: center;
+         padding: 0px;
+         display: flex;
+         align-items:baseline; 
+        }
+    ul{ 
+        display: flex;
+        flex-direction: row;
+        align-items:flex-start; 
+        align-content: flex-start;
+        gap :18px;
+    }
+    span{
+        padding-right : 7px;
+    }
+}
 }

@@ -1,0 +1,95 @@
+@use'../index' as *;
+main {
+.fonctionnement {
+    height: 300px;
+    padding : 25px; 
+    text-align: center;
+    ul {
+        display: inline-block;
+        justify-content: center;
+        align-content: center; 
+    }
+    li {
+        @include box;
+        display: flex;
+        align-content: center;
+        width: 300px;
+        height: 30px;
+        @include shadow;   
+        margin-bottom: 20px;
+    }
+
+    span {
+        padding-right: 15px;
+        color: $icone-grey;
+        font-size: 20px;
+        align-items: baseline; 
+        align-content: center;
+    }
+h2 {
+    text-align: left;
+    @include title;
+    font-family: $font-p;
+    padding-left: 0px;
+}
+}
+}
+.fonctionnement li:nth-child(3){
+    span {
+        color: $style-color-first;
+    }    
+}
+.number {
+    transform: translate(-32px);
+    @include circle;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+@media (min-width: $desktop) {
+    main {
+    .fonctionnement {
+        height: 200px;
+        width: 1440px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin:40px;
+  
+    h2{
+        text-align: left;
+    }
+    ul{
+        display: flex; 
+        flex-direction: row; 
+        gap:25px;
+        margin: 20px;
+    }
+    span {
+        display: inline;
+        align-content: start;
+    }
+    li {
+        height: 30px;
+        justify-content: center;
+        text-align: left;
+        margin-bottom: 0px;
+    }
+}
+}
+}
+
+@media (min-width: $tablet) and (max-width:$desktop) {
+    main {
+        .fonctionnement {
+            h2 {
+                text-align: center;
+            }
+    ul{
+        text-align :left ;
+    }
+}
+}
+}

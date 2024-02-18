@@ -1,0 +1,12 @@
+@use'../util/colors' as *;
+
+@mixin button {
+    background: linear-gradient(to top, $style-color-first, $style-color-second); // Correction ici
+    color: #ffffff; // Couleur du texte
+    padding: 10px 20px; // Espacement intérieur du bouton
+    border: none; // Supprimer la bordure
+    border-radius: 20px; // Ajouter des coins arrondis
+    cursor: pointer; // Curseur pointeur au survol
+    font-size: 16px; // Taille de la police
+    transition: background 0.3s ease; // Transition douce lors du survol
+}

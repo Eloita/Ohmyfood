@@ -1,3 +1,11 @@
 @use'./layout/header';
+@use'./layout/body';
+@use'./layout/reservez';
+@use'./layout/_fonctionnnement';
+@use'./layout/restaurant';
 @use'./layout/footer';
 @use'./base/reset';
+@use'./base/font';
+@use './index' as *;
+
+
