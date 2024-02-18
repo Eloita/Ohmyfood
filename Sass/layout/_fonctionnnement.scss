@@ -51,15 +51,15 @@ h2 {
     main {
     .fonctionnement {
         height: 200px;
-        width: 1440px;
+        //width: 1440px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        justify-content: center;
+       // justify-content: center;
         margin:40px;
   
     h2{
-        text-align: left;
+      display : inline;
     }
     ul{
         display: flex; 
@@ -73,10 +73,13 @@ h2 {
     }
     li {
         height: 30px;
-        justify-content: center;
+       justify-content: center;
         text-align: left;
         margin-bottom: 0px;
     }
+    .number {
+        transform: translate(-62px);
+}
 }
 }
 }
@@ -84,12 +87,31 @@ h2 {
 @media (min-width: $tablet) and (max-width:$desktop) {
     main {
         .fonctionnement {
+            height:200px;
+            ul{
+            display: flex;
+            align-items: flex-start;
+            justify-content:flex-start ;
+            gap: 45px;
+            ul {
+                display: inline-block;
+                justify-content: flex-start ;
+                align-content: flex-start; 
+            }
+        }
+        li {
+            @include box;
+            display: flex;
+            align-content:flex-start ;
+            flex-wrap: nowrap;
+            width: 300px;
+            height: 30px;
+        }
+     
             h2 {
                 text-align: center;
             }
-    ul{
-        text-align :left ;
-    }
+
 }
 }
 }

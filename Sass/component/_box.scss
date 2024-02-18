@@ -14,13 +14,15 @@
 }
 
 @mixin new {
-    background-color: $color-nouveau-restaurant;
+    background-color: $background-new-restaurant;
     padding: 10px;
-    border-radius: 5px;
+    width: 60px;
+    border-radius: 3px;
+    color: $color-new-restaurant;
 }
 
 @mixin fullHeart {
-    color: linear-gradient(to top, $style-color-first, $style-color-second);
+    background-color: linear-gradient(to top, $style-color-first, $style-color-second);
     border: none;
 }
 @mixin heart {
