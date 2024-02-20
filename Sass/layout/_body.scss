@@ -1,14 +1,6 @@
 @use'../index' as *;
-body {
-    font-family: $font-p ;
-}
 
-/*@media (min-width: $desktop) {
-    main {  
-width: 100%;
-max-width: 1440px;
-padding: 0 50px;
-box-sizing: border-box;
+body {
+    font-family: $font-text ;
 }
-}*/
 

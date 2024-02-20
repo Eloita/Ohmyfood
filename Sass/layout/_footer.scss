@@ -18,13 +18,13 @@ footer {
             padding: 18px;
         }
             li {
-                font-size: $size-p ;
+                font-size: $font-text ;
                 padding-top: 7px;
                 }
 
         a {
             @include lien ;
-            font-family : $font-p;
+            font-family : $font-text;
         }
         span {
             padding-right : 17px;   

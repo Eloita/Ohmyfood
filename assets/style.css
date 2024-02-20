@@ -95,54 +95,67 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/*@media (min-width: $desktop) {
-    main {  
-width: 100%;
-max-width: 1440px;
-padding: 0 50px;
-box-sizing: border-box;
-}
-}*/
-main .reservez {
+.reservez {
   width: 100%;
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
-  height: 300px;
+  padding: 30px 0px;
   gap: 30px;
 }
-main .reservez h2 {
-  font-size: 1.8rem;
-  font-weight: 1000;
-  padding: 25px 20px;
-  font-family: "Roboto", sans-serif;
-  padding-bottom: 0px;
+.reservez h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-main .reservez button {
+.reservez p {
+  font-size: 1.125rem;
+  font-weight: 100;
+  color: #353535;
+}
+.reservez a {
   background: linear-gradient(to top, #9356DC, #ff79da);
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 14px 18px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
   transition: background 0.3s ease;
+  text-decoration: none;
 }
 
-main .fonctionnement {
+.fonctionnement {
   height: 300px;
   padding: 25px;
   text-align: center;
 }
-main .fonctionnement ul {
+.fonctionnement h2 {
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 800;
+  padding: 25px 20px;
+  font-family: "Roboto", sans-serif;
+  padding-left: 0px;
+}
+.fonctionnement ul {
   display: inline-block;
   justify-content: center;
   align-content: center;
 }
-main .fonctionnement li {
+.fonctionnement .number {
+  transform: translate(-32px);
+  background-color: #9356DC;
+  padding: 10px;
+  width: 60px;
+  border-radius: 3px;
+  color: #9356DC;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement li {
   background-color: #F6F6F6;
   padding: 15px;
   border-radius: 20px;
@@ -154,85 +167,66 @@ main .fonctionnement li {
   box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
 }
-main .fonctionnement span {
+.fonctionnement span {
   padding-right: 15px;
   color: #7E7E7E;
   font-size: 20px;
   align-items: baseline;
   align-content: center;
 }
-main .fonctionnement h2 {
-  text-align: left;
-  font-size: 1.8rem;
-  font-weight: 1000;
-  padding: 25px 20px;
-  font-family: "Roboto", sans-serif;
-  padding-left: 0px;
-}
-
 .fonctionnement li:nth-child(3) span {
   color: #9356DC;
 }
 
-.number {
-  transform: translate(-32px);
-  background-color: #9356DC;
-  border-radius: 70%;
-  width: 30px;
-  height: 30px;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (min-width: 1024px) {
-  main .fonctionnement {
-    height: 200px;
+  .fonctionnement {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 40px;
   }
-  main .fonctionnement h2 {
+  .fonctionnement h2 {
     display: inline;
   }
-  main .fonctionnement ul {
+  .fonctionnement ul {
     display: flex;
     flex-direction: row;
     gap: 25px;
     margin: 20px;
   }
-  main .fonctionnement span {
+  .fonctionnement span {
     display: inline;
     align-content: start;
   }
-  main .fonctionnement li {
+  .fonctionnement li {
     height: 30px;
     justify-content: center;
     text-align: left;
     margin-bottom: 0px;
   }
-  main .fonctionnement .number {
+  .fonctionnement .number {
     transform: translate(-62px);
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  main .fonctionnement {
+@media (min-width: 768px) {
+  .fonctionnement {
     height: 200px;
   }
-  main .fonctionnement ul {
+  .fonctionnement ul {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 45px;
   }
-  main .fonctionnement ul ul {
+  .fonctionnement ul h2 {
+    text-align: center;
+  }
+  .fonctionnement ul ul {
     display: inline-block;
     justify-content: flex-start;
     align-content: flex-start;
   }
-  main .fonctionnement li {
+  .fonctionnement ul li {
     background-color: #F6F6F6;
     padding: 15px;
     border-radius: 20px;
@@ -242,19 +236,17 @@ main .fonctionnement h2 {
     width: 300px;
     height: 30px;
   }
-  main .fonctionnement h2 {
-    text-align: center;
-  }
 }
-main .new {
-  background-color: #99E2D0;
-  padding: 10px;
-  width: 60px;
-  border-radius: 3px;
-  color: #008766;
-}
-main .heart {
-  color: linear-gradient(to bottom, #ff79da, #9356DC);
+/*
+.new {
+    background-color: $background-new-restaurant;
+    padding: 10px;
+    width: 60px;
+    border-radius: 3px;
+    color: $color-new-restaurant;
+}*/
+.heart {
+  color: linear-gradient(to bottom, #9356DC, #ff79da);
 }
 
 .restaurant {
@@ -266,7 +258,7 @@ main .heart {
 }
 .restaurant h2 {
   font-size: 1.8rem;
-  font-weight: 1000;
+  font-weight: 800;
   padding: 25px 20px;
   padding-left: 0px;
 }
@@ -368,7 +360,7 @@ footer ul {
   padding: 18px;
 }
 footer li {
-  font-size: 16px;
+  font-size: "Roboto", sans-serif;
   padding-top: 7px;
 }
 footer a {
@@ -434,6 +426,4 @@ footer span {
   footer span {
     padding-right: 7px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

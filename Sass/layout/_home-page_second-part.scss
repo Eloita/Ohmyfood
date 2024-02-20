@@ -1,0 +1,130 @@
+@use'../index' as *;
+
+.fonctionnement {
+    height: 300px;
+    padding: 25px;
+    text-align: center;
+
+    h2 {
+        text-align: left;
+        @include title;
+        font-family: $font-text;
+        padding-left: 0px;
+    }
+
+    ul {
+        display: inline-block;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .number {
+        transform: translate(-32px);
+        background-color: $color-purple;
+        padding: 10px;
+        width: 60px;
+        border-radius: 3px;
+        color: $color-purple;
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li {
+        background-color: $background-color-main;
+        padding: 15px;
+        border-radius: 20px;
+        display: flex;
+        align-content: center;
+        width: 300px;
+        height: 30px;
+        @include shadow;
+        margin-bottom: 20px;
+    }
+
+    span {
+        padding-right: 15px;
+        color: $icone-grey;
+        font-size: 20px;
+        align-items: baseline;
+        align-content: center;
+    }
+
+    & li:nth-child(3) {
+        span {
+            color: $color-purple;
+        }
+    }
+}
+
+
+@media (min-width: $desktop) {
+
+    .fonctionnement {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 40px;
+
+        h2 {
+            display: inline;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            margin: 20px;
+        }
+
+        span {
+            display: inline;
+            align-content: start;
+        }
+
+        li {
+            height: 30px;
+            justify-content: center;
+            text-align: left;
+            margin-bottom: 0px;
+        }
+
+        .number {
+            transform: translate(-62px);
+        }
+    }
+}
+
+
+@media (min-width: $tablet) {
+
+    .fonctionnement {
+        height: 200px;
+
+        ul {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 45px;
+
+            h2 {
+                text-align: center;
+            }
+            ul {
+                display: inline-block;
+                justify-content: flex-start;
+                align-content: flex-start;
+            }
+
+            li {
+                @include box;
+                display: flex;
+                align-content: flex-start;
+                flex-wrap: nowrap;
+                width: 300px;
+                height: 30px;
+            }
+        }
+    }
+}

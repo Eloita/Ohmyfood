@@ -5,27 +5,3 @@
     padding: 15px;
     border-radius: 20px;
 }
-
-@mixin circle {
-    background-color: $style-color-first; 
-    border-radius: 70%;
-    width: 30px;
-    height: 30px; 
-}
-
-@mixin new {
-    background-color: $background-new-restaurant;
-    padding: 10px;
-    width: 60px;
-    border-radius: 3px;
-    color: $color-new-restaurant;
-}
-
-@mixin fullHeart {
-    background-color: linear-gradient(to top, $style-color-first, $style-color-second);
-    border: none;
-}
-@mixin heart {
-    border: 1px;
-    color: $icone-grey;
-}

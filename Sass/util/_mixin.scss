@@ -1,5 +1,5 @@
 @mixin style-color{
-    background: linear-gradient(to bottom, $style-color-second, $style-color-first);
+    background: linear-gradient(to bottom, $color-pink, $color-purple);
 }
 
 @mixin flex-center {
@@ -21,7 +21,7 @@
 }
 @mixin title {
     font-size: 1.8rem;
-    font-weight: 1000;
+    font-weight: 800;
     padding: 25px 20px; //(T-R-B-L)
 }
 
