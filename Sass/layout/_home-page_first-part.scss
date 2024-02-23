@@ -1,6 +1,6 @@
 @use'../index' as *;
 
-.reservez {
+.first-main-part {
     width: 100%;
     background-color: $background-color-main;
     display: flex;
@@ -23,5 +23,6 @@
 
     a {
         @include button;
+        font-weight: 500;
     }
 }

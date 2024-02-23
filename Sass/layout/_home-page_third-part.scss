@@ -14,7 +14,7 @@
 }
 
 
-.restaurant {
+.third-main-part {
     box-sizing: border-box;
     background-color: $background-color-main;
     display: flex;
@@ -43,7 +43,7 @@
     }
 }
 
-.restaurants-card {
+.container {
     border: none;
     display: flex;
     flex-direction: column;
@@ -78,12 +78,12 @@
     border-bottom-right-radius: 20px;
 }
 
-.restaurants-card .content {
+.container .content {
     padding: 15px 10px;
     height: 50%;
 }
 
-.restaurants-card span {
+.container span {
     //transform:translate(200px) ;
     display: inline;
     justify-content: end;
@@ -92,7 +92,7 @@
     padding-top: 4px;
 }
 
-.restaurants-card span {
+.container span {
     display: inline-block;
     flex-direction: column;
     align-items: center;
@@ -100,12 +100,12 @@
 }
 
 @media (min-width: $desktop) {
-    .restaurants-card {
+    .container {
         display: flex;
         column-gap: 30px;
     }
 
-    .restaurants-card .card {
+    .container .card {
         display: flex;
         height: 207px;
         flex-direction: column;

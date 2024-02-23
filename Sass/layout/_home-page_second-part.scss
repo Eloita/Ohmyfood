@@ -1,130 +1,99 @@
 @use'../index' as *;
 
-.fonctionnement {
-    height: 300px;
+.second-main-part {
     padding: 25px;
-    text-align: center;
 
     h2 {
         text-align: left;
         @include title;
-        font-family: $font-text;
-        padding-left: 0px;
+        padding: 20px 25px 20px 0px;
     }
 
-    ul {
-        display: inline-block;
-        justify-content: center;
-        align-content: center;
+    ol {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 10px;
+    }
+
+    li {
+        display: flex;
+        background-color: $background-color-main;
+        padding: 15px;
+        border-radius: 20px;
+        width: 95%;
+        @include shadow;
     }
 
     .number {
-        transform: translate(-32px);
-        background-color: $color-purple;
-        padding: 10px;
-        width: 60px;
-        border-radius: 3px;
-        color: $color-purple;
+        transform: translate(-26px);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 24 25' fill='%239356DC'%3E%3Ccircle cx='12' cy='12.8624' r='12' fill='%239356DC'/%3E%3C/svg%3E");
+        width: 25px;
+        height: 25px;
+        padding-right: 0px;
+        font-size: 1.143rem;
+        font-weight: 500;
         color: $color-white;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
 
-    li {
-        background-color: $background-color-main;
-        padding: 15px;
-        border-radius: 20px;
-        display: flex;
-        align-content: center;
-        width: 300px;
-        height: 30px;
-        @include shadow;
-        margin-bottom: 20px;
     }
 
     span {
         padding-right: 15px;
         color: $icone-grey;
         font-size: 20px;
-        align-items: baseline;
         align-content: center;
     }
 
-    & li:nth-child(3) {
-        span {
-            color: $color-purple;
-        }
+    .icone {
+        color: $color-purple;
     }
 }
-
-
-@media (min-width: $desktop) {
-
-    .fonctionnement {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        margin: 40px;
-
-        h2 {
-            display: inline;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            gap: 25px;
-            margin: 20px;
-        }
-
-        span {
-            display: inline;
-            align-content: start;
-        }
-
-        li {
-            height: 30px;
-            justify-content: center;
-            text-align: left;
-            margin-bottom: 0px;
-        }
-
-        .number {
-            transform: translate(-62px);
-        }
-    }
-}
-
 
 @media (min-width: $tablet) {
 
-    .fonctionnement {
-        height: 200px;
+    .second-main-part {
 
-        ul {
+        gap: 20px;
+
+        ol {
             display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: 45px;
-
-            h2 {
-                text-align: center;
-            }
-            ul {
-                display: inline-block;
-                justify-content: flex-start;
-                align-content: flex-start;
-            }
+            flex-direction: row;
+            max-width: 1024px;
+        }
 
             li {
-                @include box;
                 display: flex;
-                align-content: flex-start;
-                flex-wrap: nowrap;
-                width: 300px;
-                height: 30px;
+                max-width: 300px;
             }
         }
     }
-}
+
+        @media (min-width: $desktop) {
+
+            .second-main-part {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 40px;
+
+                ol {
+                    max-width: 1023px;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 25px;
+                }
+
+                span {
+                    display: inline;
+                    align-content: start;
+                }
+
+                li {
+                    text-align: left;
+                    margin-bottom: 0px;
+                }
+            }
+        }
