@@ -9,11 +9,12 @@ header {
         display: grid;
         place-items: center;
         width: 100%;
-        height: 55px;
+        padding: 22px 0px 12px 0px;
         text-align: center;
-        @include shadow;
+        margin: 0px 0px 4px 0px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
         font-family: $font-title;
-        font-size: 1.875rem; 
+        font-size: 30px; 
     }
 
     p {
@@ -22,8 +23,10 @@ header {
         width: 100%;
         padding: 14px 0px;
         margin: 0px;
+        font-weight: 500;
         font-family: $font-text;
         color: $black-color;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
 
     span {
@@ -31,12 +34,19 @@ header {
         padding-right: 17px;
     }
 }
-@media (min-width:$desktop) {
+@media (min-width:$tablet) {
     header {
         h1 {
-            padding: 0px;
-            height:80px;
+            margin: 0px;
+            //height:80px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        }
+        p{
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
         }
     }
+}
+@media (min-width:$desktop) {
+    
 
 }

@@ -1,19 +1,5 @@
 @use'../index' as *;
 
-/*
-.new {
-    background-color: $background-new-restaurant;
-    padding: 10px;
-    width: 60px;
-    border-radius: 3px;
-    color: $color-new-restaurant;
-}*/
-
-.heart {
-    color: linear-gradient(to bottom, $color-purple, $color-pink);
-}
-
-
 .third-main-part {
     box-sizing: border-box;
     background-color: $background-color-main;
@@ -27,19 +13,57 @@
     }
 
     h3 {
+        color: $black-color;
         font-family: $font-text;
+        //font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
         padding-bottom: 10px;
         font-weight: 800;
     }
-
+p {
+    font-size: 1.125rem;
+        font-weight: 100;
+        color: $dark-grey ;
+}
     img {
-        height: 200px;
+        height: 346px;
         width: 100%;
     }
 
     a {
         color: inherit;
         text-decoration: none;
+    }
+
+    .badge {
+        display: inline-block;
+        margin: 15px;
+        background-color: $light-green;
+        padding: 10px;
+        width: 60px;
+        border-radius: 3px;
+        color: $dark-green;
+        position: absolute;
+        text-align: right;
+    }
+
+    button {
+
+        width: 30px;
+        height: 30px;
+        //background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='21' viewBox='0 0 23 21' fill='none'%3E%3Cpath d='M12.7206 2.40551L12.7203 2.40576L11.8739 3.35732L11.5003 3.77727L11.1267 3.35732L10.2802 2.40576L10.2797 2.40514C8.28247 0.152585 5.09737 -0.169649 2.9764 1.80201C0.482212 4.1245 0.344816 8.32357 2.58455 10.8495L10.8987 20.2148C10.8987 20.2149 10.8988 20.2149 10.8988 20.2149C11.237 20.5955 11.7593 20.5955 12.0975 20.2149C12.0975 20.2149 12.0975 20.2149 12.0976 20.2148L20.4119 10.8493L20.412 10.8492C22.6556 8.32335 22.5183 4.12461 20.0243 1.80213L12.7206 2.40551ZM12.7206 2.40551C14.7223 0.15233 17.9032 -0.169452 20.024 1.80187L12.7206 2.40551Z' stroke='%23101010'/%3E%3C/svg%3E");
+        //background-repeat: no-repeat;
+        /* Empêche la répétition du fond 
+        transition-duration: 1000ms;
+
+        &:hover {
+            color: linear-gradient(to bottom, $color-purple, $color-pink);
+
+        }
+*/
     }
 }
 
@@ -79,7 +103,7 @@
 }
 
 .container .content {
-    padding: 15px 10px;
+    padding: 15px 20px;
     height: 50%;
 }
 
