@@ -1,29 +1,35 @@
 @use'../index' as *;
 
 .second-main-part {
-    padding: 25px;
+    padding: 0px 30px 0px 20px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+
 
     h2 {
         text-align: left;
         @include title;
-        padding: 20px 25px 20px 0px;
+        padding: 20px 25px 30px 0px;
     }
 
     ol {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        padding-left: 10px;
+        gap: 18px;
+        padding-left: 14px;
     }
 
     li {
         display: flex;
         background-color: $background-color-main;
-        padding: 15px;
+        padding: 23px 15px;
         border-radius: 20px;
         width: 95%;
         margin: 0px 0px 5px 0px;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.20);
     }
 
     .number {
@@ -33,7 +39,7 @@
         width: 25px;
         height: 25px;
         padding-right: 0px;
-        font-size: 1.143rem;
+        font-size: 14px;
         font-weight: 500;
         color: $color-white;
         display: flex;
@@ -58,16 +64,13 @@
 
     .second-main-part {
 
-        gap: 20px;
-
         ol {
             display: flex;
-            flex-direction: row;
+            align-items: center;
             max-width: 1024px;
         }
 
         li {
-            display: flex;
             max-width: 300px;
         }
     }
@@ -79,7 +82,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 40px;
+        height: 230px;
 
         ol {
             max-width: 1023px;
