@@ -62,7 +62,8 @@
         border-radius: 3px;
         color: $dark-green;
         position: absolute;
-        right: 3px;
+        right: -0.1em;
+        top: 0.3em;
     }
 
 
@@ -114,8 +115,8 @@
         width: 2em;
         height: 1.5em;
         margin: 15px;
-        bottom: 0.7em;
-        right: 9px;
+        bottom: 2em;
+        right: 3px;
     }
 
     .heart-checkbox:checked+label {

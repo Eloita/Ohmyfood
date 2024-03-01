@@ -228,12 +228,14 @@ body {
     max-width: 300px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1209px) {
   .second-main-part {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 230px;
+    margin: 0px;
+    padding: 0px 180px;
   }
   .second-main-part ol {
     max-width: 1023px;
@@ -306,7 +308,8 @@ body {
   border-radius: 3px;
   color: #008766;
   position: absolute;
-  right: 3px;
+  right: -0.1em;
+  top: 0.3em;
 }
 .third-main-part .container {
   border: none;
@@ -349,8 +352,8 @@ body {
   width: 2em;
   height: 1.5em;
   margin: 15px;
-  bottom: 0.7em;
-  right: 9px;
+  bottom: 2em;
+  right: 3px;
 }
 .third-main-part .heart-checkbox:checked + label {
   background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);

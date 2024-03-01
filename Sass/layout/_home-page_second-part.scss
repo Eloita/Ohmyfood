@@ -45,7 +45,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     span {
@@ -76,13 +75,15 @@
     }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: 1209px) {
 
     .second-main-part {
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 230px;
+        margin: 0px;
+        padding: 0px 180px;
 
         ol {
             max-width: 1023px;
