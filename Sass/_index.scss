@@ -1,12 +1,10 @@
 //all partials can be call
-@forward "./base/font";
 @forward "./base/reset";
+@forward "./base/font";
 @forward "./component/box";
 @forward "./component/button";
 @forward "./component/card";
 @forward "./component/loader";
-//@forward "./layout/footer";
-//@forward "./layout/header";
 @forward "./util/breakpoint";
 @forward "./util/colors";
 @forward "./util/mixin";

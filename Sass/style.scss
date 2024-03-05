@@ -1,11 +1,11 @@
+@use'./base/reset';
+@use'./base/font';
 @use'./layout/header';
 @use'./layout/body';
 @use'./layout/home-page_first-part.scss';
 @use'./layout/home-page_second-part.scss';
 @use'./layout/home-page_third-part';
 @use'./layout/footer';
-@use'./base/reset';
-@use'./base/font';
 @use './index' as *;
 
 

@@ -1,12 +1,27 @@
 @use'../index' as *;
 
+.background {
+    background-color: $background-color-main;
+}
+
 .third-main-part {
     position: relative;
     box-sizing: border-box;
-    background-color: $background-color-main;
     display: flex;
     flex-direction: column;
     padding: 30px;
+
+
+    .container.container.image-gap article.card a>div img {
+        display: block;
+        /* Assure que l'image se comporte comme un bloc */
+        vertical-align: middle;
+        /* Ajuste l'alignement vertical de l'image */
+        margin: 0;
+        /* Supprime les marges par défaut de l'image */
+        padding: 0;
+        /* Supprime les paddings par défaut de l'image */
+    }
 
     a {
         color: inherit;
@@ -22,6 +37,7 @@
     h2 {
         @include title;
         padding-left: 0px;
+
     }
 
     h3 {
@@ -41,36 +57,27 @@
     }
 
     img {
-        height: 180px;
+        height: 174px;
         width: 100%;
     }
 
-    /*.like {
-        position: absolute;
-        width: 1.1em;
-        height: 1.1em;
-        bottom: 0.9em;
-        margin: 15px;
-        right: 3px;
-    }*/
-
     .badge {
         margin: 15px;
+        font-size: 14px;
         background-color: $light-green;
-        padding: 10px;
+        padding: 6px 10px;
         width: 60px;
         border-radius: 3px;
         color: $dark-green;
         position: absolute;
         right: -0.1em;
-        top: 0.3em;
+        top: 0.1em;
     }
 
-
     .container {
-        border: none;
         display: flex;
         flex-direction: column;
+        justify-content: center;
 
         a {
             margin-bottom: 25px;
@@ -93,12 +100,14 @@
 
         }
 
-        img {
-            border: none;
-            object-fit: cover;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            object-fit: cover;
+        .media-content {
+            img {
+                border: none;
+                object-fit: cover;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                object-fit: cover;
+            }
         }
     }
 
@@ -115,36 +124,26 @@
         width: 2em;
         height: 1.5em;
         margin: 15px;
-        bottom: 2em;
+        bottom: 2.3em;
         right: 3px;
+        transition: transform 450ms, background-image 300ms 150ms;
     }
 
     .heart-checkbox:checked+label {
         background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
     }
 
+    /*
     .heart-checkbox:hover+label {
         background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
+        transform: scale(1.5);
     }
 
     .heart-checkbox:focus+label {
         background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
     }
 
-    #heartCheckbox1:checked+.heart-label {
-        background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
-    }
-
-    #heartCheckbox2:checked+.heart-label {
-        background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
-    }
-
-    #heartCheckbox3:checked+.heart-label {
-        background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
-    }
-
-
-
+*/
     .card {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -156,7 +155,6 @@
     }
 
     .container span {
-        //transform:translate(200px) ;
         display: inline;
         justify-content: end;
         text-align: end;
@@ -173,26 +171,56 @@
 
 }
 
-/*
-@media (min-width: $desktop) {
-    .container {
+@media (min-width: $tablet) {
+    .third-main-part {
         display: flex;
-        column-gap: 30px;
-    }
-
-    .container .card {
-        display: flex;
-        height: 60px;
         flex-direction: column;
-        justify-content: space-between;
-        margin-top: 30px;
-        padding: 0px;
+        justify-content: center;
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            column-gap: 30px;
+
+            .content {
+                height: 50px;
+            }
+        }
+
+        .card {
+            width: 45%;
+        }
     }
-
 }
 
-/*@media (min-width: $tablet) {
-        display: flex;
-    flex-direction: row;
+@media (min-width: $desktop) {
+    .third-main-part {
+
+        margin: 0px;
+        padding: 0 180px;
+        max-width: 1330px;
+
+        .gap {
+            padding-bottom: 50px;
+        }
+
+        .h2 {
+            padding-bottom: 28px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            column-gap: 30px;
+
+            .card {
+                width: 45%;
+            }
+
+        }
+
+    }
 }
-@media (min-width: $desktop) {}*/
