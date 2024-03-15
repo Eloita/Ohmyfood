@@ -115,10 +115,10 @@
         display: none;
     }
 
-    label {
+    .heart-label {
         display: inline-block;
         cursor: pointer;
-        background-image: url(/Ohmyfood/assets/images/images/empty-heart.svg);
+        background-image: url(../assets/images/images/empty-heart.svg);
         background-repeat: no-repeat;
         position: absolute;
         width: 2em;
@@ -129,17 +129,17 @@
         transition: transform 450ms, background-image 300ms 150ms;
     }
 
-    .heart-checkbox:checked+label {
-        background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
+    .heart-checkbox:checked+.heart-label {
+        background-image: url(../assets/images/images/full-heart.svg);
     }
 
     /*
-    .heart-checkbox:hover+label {
+    .heart-checkbox:hover+.heart-label {
         background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
         transform: scale(1.5);
     }
 
-    .heart-checkbox:focus+label {
+    .heart-checkbox:focus+.heart-label{
         background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
     }
 

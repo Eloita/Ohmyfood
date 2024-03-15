@@ -1,52 +1,56 @@
 @use'../index' as *;
 
-
+/***header restaurant page***/
 .header-restaurant {
     display: flex;
     align-items: center;
-    /* Centre les éléments verticalement */
-    //box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     font-family: $font-title;
     font-size: 30px;
     padding: 22px 0px 12px 0px;
 }
-
 
 .header-restaurant a {
     @include lien;
     display: inline;
     margin-left: 20px;
     font-size: 20px;
-    /* Ajoute un espacement entre la flèche et le titre */
 }
 
 .header-restaurant h1 {
     margin: 0 auto;
-    /* Centre le titre horizontalement */
     width: 100%;
     text-align: center;
 }
 
+/*** Restaurant's image ***/
 .a-la-française-image {
     background-image: url(../assets/images/images/photos/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
 
-//.image resto background-image: url()
-//.image resto background-image: url()
-//.image resto background-image: url()
+.la-note-enchante-image {
+    background-image: url(../assets/images/images/photos/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
 
+.delice-des-sens-image {
+    background-image: url(../assets/images/images/photos/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+.la-palette-image {
+    background-image: url(../assets/images/images/photos/jay-wennington-N_Y88TWmGwA-unsplash.jpg)
+}
+
+/*** Main of menu's restaurant ***/
 .restaurant-main {
+
     .restaurant-background {
         min-height: 275px;
         background-size: cover;
         background-position: center;
-        
+
         .menu {
             background-color: $background-color-main;
             margin: -2em;
             padding: 15px;
-            //border-top-left-radius: 50px;
-            // border-top-right-radius: 50px;
         }
     }
 
@@ -56,24 +60,54 @@
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
         margin-top: -30px;
+
+        .menu-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     section {
         padding-bottom: 40px;
+        width: 98%;
     }
 
     .menu-title {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
         padding: 15px;
+
+        .heart-checkbox {
+            display: none;
+        }
+
+        .heart-label {
+            display: flex;
+            cursor: pointer;
+            background-image: url(../assets/images/images/empty-heart.svg);
+            background-repeat: no-repeat;
+            width: 2em;
+            height: 1.5em;
+            bottom: 2.3em;
+            right: 3px;
+            transition: transform 450ms, background-image 300ms 150ms;
+        }
+
+        div.favorite-icon {
+            padding-top: 18px;
+        }
+
+        .heart-checkbox:checked+.heart-label {
+            background-image: url(../assets/images/images/full-heart.svg);
+        }
     }
 
     .menu ul li p {
-
         white-space: nowrap;
-        /* Empêche le texte de revenir à la ligne */
         overflow: hidden;
-        /* Masque le texte qui dépasse */
         text-overflow: ellipsis;
-        /* Ajoute des points de suspension pour indiquer que le texte est tronqué */
     }
 
 
@@ -82,33 +116,13 @@
         font-size: 1.75em;
         padding-top: 18px;
         margin-bottom: 40px;
+        margin-right: 15px;
     }
+
 
     .menu-title {
         display: flex;
         flex-direction: column;
-    }
-
-    .heart-checkbox {
-        display: none;
-    }
-
-    label {
-        display: inline-block;
-        cursor: pointer;
-        background-image: url(/Ohmyfood/assets/images/images/empty-heart.svg);
-        background-repeat: no-repeat;
-        position: absolute;
-        width: 2em;
-        height: 1.5em;
-        left: 15em;
-        top: 30.5em;
-        margin-top: 15px;
-        transition: transform 450ms, background-image 300ms 150ms;
-    }
-
-    .heart-checkbox:checked+label {
-        background-image: url(/Ohmyfood/assets/images/images/full-heart.svg);
     }
 
     h3 {
@@ -123,63 +137,168 @@
         padding-bottom: 10px;
     }
 
+    .check-icon {
+        display: none;
+    }
+
+
     ul {
         display: flex;
         flex-direction: column;
         margin-top: 12px;
         gap: 18px;
 
-
         li {
+
             display: inline;
             background-color: $background-color-main;
             flex-wrap: nowrap;
-            padding: 15px;
+            padding-left: 15px;
             border-radius: 20px;
-            width: 95%;
-            height: 50px;
+            width: 100%;
+            //height: 50px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
             position: relative;
 
-            span {
+            .flex {
+                p {
+                    flex-grow: 2;
+                }
+            }
+
+            .checkbox {
+                display: none;
+            }
+
+            .check-icon {
+                position: relative;
                 display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                position: absolute;
-                right: 1.8em;
-                top: 2.4em;
+                flex-direction: row;
+                height: 5em;
+                width: 4em;
+                margin-left: -4em;
+                transform: translateX(100%);
+                opacity: 0;
+
+                &:hover.check-icon {
+                    transition: all 0.9s ease-out;
+                    transform: translateX(0);
+                    margin-left: 0em;
+                    opacity: 1;
+                }
+
+            }
+
+            img {
+                height: 5em;
+                //width: 4em;
             }
         }
+    }
 
-        h4,
-        p {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 80%;
-        }
+}
 
-        h4,
-        span {
+li {
+    .list {
+        display: flex;
+        align-items: center;
+
+        h4 {
             font-size: 1.125em;
             font-style: normal;
             font-weight: 700;
         }
 
-        p {
-            font-size: 0.875;
-            font-weight: 300;
+        .meal-name {
+            width: 100%;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+
+            .price {
+                font-size: 1.125em;
+                font-style: normal;
+                font-weight: 700;
+                margin-right: 1em;
+
+            }
         }
     }
-    .order-button{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding-bottom: 40px;
-       a {
+}
+
+
+h4,
+/*
+p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+}*/
+
+
+p {
+    font-size: 0.875;
+    font-weight: 300;
+}
+
+.order-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+
+    button {
         @include button;
         font-weight: 500;
+        width: 186px;
+    }
+}
+
+
+@media (min-width: $desktop) {
+    .restaurant-main {
+        h2 {
+            text-align: center;
         }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: -30px 180px 0px 180px;
+
+            .menu-title {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            div.favorite-icon {
+                padding-top: 0px;
+            }
+
+            section {
+                display: flex;
+                justify-content: center;
+            }
+
+            .layout-list {
+                width: 75%;
+            }
+
+            h2 {
+                padding: 0px;
+            }
+
+            label {
+                margin-top: 1px;
+            }
+        }
+
+
     }
 }
