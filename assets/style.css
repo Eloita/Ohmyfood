@@ -733,14 +733,14 @@ footer span {
   transform: translateX(100%);
   opacity: 0;
 }
-.restaurant-main ul li .check-icon:hover.check-icon {
+.restaurant-main ul li .list img {
+  height: 5em;
+}
+.restaurant-main ul li:hover .check-icon {
   transition: all 0.9s ease-in-out;
   transform: translateX(0);
   margin-left: 0em;
   opacity: 1;
-}
-.restaurant-main ul li .list img {
-  height: 5em;
 }
 
 li .list {

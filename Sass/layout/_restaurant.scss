@@ -174,26 +174,24 @@
             .check-icon {
                 position: relative;
                 display: flex;
-                // background-image: url("../assets/images/images/green-button.svg");
                 flex-direction: row;
                 height: 5em;
                 width: 4em;
                 margin-left: -4em;
                 transform: translateX(100%);
                 opacity: 0;
-
-                &:hover.check-icon {
-                    // background-image: url("../assets/images/images/green-button.svg");
-                    transition: all 0.9s ease-in-out;
-                    transform: translateX(0);
-                    margin-left: 0em;
-                    opacity: 1;
-                }
             }
 
             .list img {
                 height: 5em;
                 //width: 4em;
+            }
+
+            &:hover .check-icon {
+                transition: all 0.9s ease-in-out;
+                transform: translateX(0);
+                margin-left: 0em;
+                opacity: 1;
             }
         }
     }
