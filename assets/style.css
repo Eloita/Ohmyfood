@@ -746,6 +746,7 @@ footer span {
 li .list {
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 li .list h4 {
   font-size: 1.125em;
