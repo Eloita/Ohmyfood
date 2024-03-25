@@ -6,7 +6,6 @@ footer {
     display:flex;
     flex-direction: column;
     justify-content: start;
-    align-items: left;
     width: 100%;
     
         h2{ 
@@ -18,7 +17,6 @@ footer {
             padding: 18px;
         }
             li {
-                font-size: $font-text ;
                 padding-top: 7px;
                 }
 

@@ -195,7 +195,6 @@
             }
         }
     }
-
 }
 
 li {
@@ -420,17 +419,17 @@ li {
     }
 }
 h4,
-/*
-p {
+
+/*p {
     white-space: nowrap;
-    overflow: hidden;
+   // overflow: hidden;
     text-overflow: ellipsis;
     max-width: 80%;
 }*/
 
 
 p {
-    font-size: 0.875;
+    font-size: 0.875em;
     font-weight: 300;
 }
 
