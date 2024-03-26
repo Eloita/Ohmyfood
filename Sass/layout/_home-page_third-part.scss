@@ -1,5 +1,6 @@
 @use'../index' as *;
 
+
 .background {
     background-color: $background-color-main;
 }
@@ -11,21 +12,14 @@
     flex-direction: column;
     padding: 30px;
 
-
     .container.container.image-gap article.card a>div img {
         display: block;
-        /* Assure que l'image se comporte comme un bloc */
         vertical-align: middle;
-        /* Ajuste l'alignement vertical de l'image */
         margin: 0;
-        /* Supprime les marges par défaut de l'image */
         padding: 0;
-        /* Supprime les paddings par défaut de l'image */
     }
 
     a {
-        color: inherit;
-        text-decoration: none;
         position: relative;
     }
 
@@ -37,7 +31,6 @@
     h2 {
         @include title;
         padding-left: 0px;
-
     }
 
     h3 {

@@ -8,7 +8,7 @@ footer {
     justify-content: start;
     width: 100%;
     
-        h2{ 
+        p{ 
             font-family: $font-title;
             font-size: 18px;
             padding: 22px 22px 0px 22px;
@@ -20,10 +20,6 @@ footer {
                 padding-top: 7px;
                 }
 
-        a {
-            @include lien ;
-            font-family : $font-text;
-        }
         span {
             padding-right : 17px;   
         }
@@ -31,7 +27,7 @@ footer {
 
 @media (min-width: $desktop) {
    footer {
-        display : flex;
+     
         flex-direction : row-reverse;
         align-items : flex-end;
         justify-content: end;
@@ -39,7 +35,7 @@ footer {
         gap : 60px;
         margin:0px;
   
-       h2 {
+       p {
             padding-right : 60px ; 
         }
         ul { 
@@ -63,13 +59,12 @@ footer {
 
 @media (min-width: $tablet) and (max-width:$desktop) {
    footer { 
-        display : flex;
         flex-direction : row-reverse;
         align-items : baseline;
         justify-content: center;
         gap : 15px;
         
-    h2 {
+    p {
         justify-content: center;
         align-content: center;
          padding: 0px;

@@ -10,7 +10,6 @@
 }
 
 .header-restaurant a {
-    @include lien;
     display: inline;
     margin-left: 20px;
     font-size: 20px;
@@ -40,20 +39,44 @@
 }
 
 /*** Main of menu's restaurant ***/
-.restaurant-main {
+.block-restaurant {
 
     .restaurant-background {
         min-height: 275px;
         background-size: cover;
         background-position: center;
-
-        .menu {
-            background-color: $background-color-main;
-            margin: -2em;
-            padding: 15px;
+    }
+    section {
+        animation: appear 2500ms forwards ease-in-out;
+      
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i+1}) {
+                 animation-delay: #{$i*.2}s;
+             }
+            }
+        }
+    li
+         {
+        animation: appear 4000ms forwards ease-in-out;
+      
+        @for $i from 1 through 9 {
+            &:nth-child(#{$i+1}) {
+                 animation-delay: #{$i*.2}s;
+             }
+            }
+        }
+    
+    @keyframes appear {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateX(0%);
         }
     }
-
     .menu {
         background-color: $background-color-main;
         padding: 15px;
@@ -74,8 +97,6 @@
     }
 
     .menu-title {
-        flex-direction: row;
-        display: flex;
         justify-content: center;
         padding: 15px;
 
@@ -110,7 +131,6 @@
         text-overflow: ellipsis;
     }
 
-
     h2 {
         font-family: $font-title;
         font-size: 1.75em;
@@ -135,12 +155,14 @@
 
     h4 {
         padding-bottom: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .check-icon {
         display: none;
     }
-
 
     ul {
         display: flex;
@@ -150,7 +172,6 @@
 
 
         li {
-
             display: inline;
             background-color: $background-color-main;
             flex-wrap: nowrap;
@@ -228,205 +249,6 @@ li {
     }
 }
 
-.appear-first {
-    animation: appear 2000ms forwards ease-in-out;
-}
-
-@keyframes appear {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear1 {
-    animation: appear1 1200ms forwards ease-in-out;
-}
-
-@keyframes appear1 {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear2 {
-    animation: appear2 1500ms forwards ease-in-out;
-}
-
-@keyframes appear2 {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear3 {
-    animation: appear3 1800ms forwards ease-in-out;
-}
-
-@keyframes appear3 {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear-second {
-    animation: appear 3000ms forwards ease-in-out;
-}
-
-@keyframes appear {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear4 {
-    animation: appear 2200ms forwards ease-in-out;
-}
-
-@keyframes appear4 {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear5 {
-    animation: appear2 2500ms forwards ease-in-out;
-}
-
-@keyframes appear4 {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear6 {
-    animation: appear6 2800ms forwards ease-in-out;
-}
-
-@keyframes appear6 {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-.appear-third {
-    animation: appear 4000ms forwards ease-in-out;
-}
-
-@keyframes appear {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear7 {
-    animation: appear7 3200ms forwards ease-in-out;
-}
-
-@keyframes appear7 {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear8 {
-    animation: appear8 3500ms forwards ease-in-out;
-}
-
-@keyframes appear8 {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.appear9 {
-    animation: appear9 3800ms forwards ease-in-out;
-}
-
-@keyframes appear9 {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-h4,
-
-/*p {
-    white-space: nowrap;
-   // overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 80%;
-}*/
-
 
 p {
     font-size: 0.875em;
@@ -449,7 +271,7 @@ p {
 
 
 @media (min-width: $desktop) {
-    .restaurant-main {
+    .block-restaurant {
         h2 {
             text-align: center;
         }
@@ -457,13 +279,12 @@ p {
         .menu {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
             margin: -30px 180px 0px 180px;
 
             .menu-title {
-                display: flex;
                 flex-direction: row;
                 justify-content: center;
+                width: 98%;
             }
 
             div.favorite-icon {
