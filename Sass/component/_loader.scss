@@ -34,7 +34,7 @@
     span {
         display: inline-block;
         margin: 0 -.05em;
-        animation: animationblur 1.2s infinite alternate;
+        animation: animationblur 3s infinite alternate;
 
         @for $i from 1 through 8 {
            &:nth-child(#{$i+1}) {

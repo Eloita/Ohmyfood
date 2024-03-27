@@ -86,7 +86,7 @@ table {
 .loading span {
   display: inline-block;
   margin: 0 -0.05em;
-  animation: animationblur 1.2s infinite alternate;
+  animation: animationblur 3s infinite alternate;
 }
 .loading span:nth-child(2) {
   animation-delay: 0.2s;
@@ -765,8 +765,8 @@ footer span {
   display: flex;
   flex-direction: row;
   height: 5em;
-  width: 4em;
-  margin-left: -4em;
+  width: 4.25em;
+  margin-left: -4.25em;
   transform: translateX(100%);
   opacity: 0;
 }
@@ -774,7 +774,7 @@ footer span {
   height: 5em;
 }
 .block-restaurant ul li:hover .check-icon {
-  transition: all 0.9s ease-in-out;
+  transition: all 0.8s ease-in-out;
   transform: translateX(0);
   margin-left: 0em;
   opacity: 1;
