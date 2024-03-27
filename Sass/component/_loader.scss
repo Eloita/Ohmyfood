@@ -1,5 +1,4 @@
-@use'../base/font' as *;
-@use'../util/colors' as *;
+@use'../index' as *;
 
 #loader-wrapper {
     position: fixed;
@@ -7,8 +6,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
-    /* Fond semi-transparent */
+    background-color: $color-white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +22,8 @@
     }
 }
 
-
 .loading {
-    font-size: 84px;
+    font-size: 48px;
     font-family: $font-title, sans-serif;
     font-weight: 800;
     text-align: center;
@@ -54,4 +51,14 @@
         filter: blur(5px);
         opacity: .2;
     }
+}
+
+@media (min-width: $desktop) {
+    .loading {
+        font-size: 84px;
+        font-family: $font-title, sans-serif;
+        font-weight: 800;
+        text-align: center; 
+    }
+
 }
