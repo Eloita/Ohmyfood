@@ -114,10 +114,10 @@
         background-image: url(../assets/images/images/empty-heart.svg);
         background-repeat: no-repeat;
         position: absolute;
-        width: 2em;
-        height: 1.5em;
+        width: 23px;
+        height: 21px;
         margin: 15px;
-        bottom: 2.3em;
+        bottom: 33px;
         right: 3px;
         transition: transform 450ms, background-image 300ms 150ms;
     }
@@ -195,7 +195,7 @@
         max-width: 1330px;
 
         .gap {
-            padding-bottom: 50px;
+            padding-bottom: 30px;
         }
 
         .h2 {

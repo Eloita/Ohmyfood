@@ -7,18 +7,18 @@
     font-family: $font-title;
     font-size: 30px;
     padding: 22px 0px 12px 0px;
-}
 
-.header-restaurant a {
-    display: inline;
-    margin-left: 20px;
-    font-size: 20px;
-}
+    a {
+        display: inline;
+        margin-left: 20px;
+        font-size: 20px;
+    }
 
-.header-restaurant h1 {
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
+    h1 {
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /*** Restaurant's image ***/
@@ -46,43 +46,45 @@
         background-size: cover;
         background-position: center;
     }
+
     section {
         animation: appear 2500ms forwards ease-in-out;
-      
+
         @for $i from 1 through 3 {
             &:nth-child(#{$i+1}) {
-                 animation-delay: #{$i*.2}s;
-             }
+                animation-delay: #{$i*.2}s;
             }
         }
-    li
-         {
+    }
+
+    li {
         animation: appear 4000ms forwards ease-in-out;
-      
+
         @for $i from 1 through 9 {
             &:nth-child(#{$i+1}) {
-                 animation-delay: #{$i*.2}s;
-             }
+                animation-delay: #{$i*.2}s;
             }
         }
-    
+    }
+
     @keyframes appear {
         0% {
             transform: translateX(100%);
             opacity: 0;
         }
-    
+
         100% {
             opacity: 1;
             transform: translateX(0%);
         }
     }
+
     .menu {
         background-color: $background-color-main;
         padding: 15px;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
-        margin-top: -30px;
+        margin-top: -50px;
 
         .menu-title {
             display: flex;
@@ -98,7 +100,7 @@
 
     .menu-title {
         justify-content: center;
-        padding: 15px;
+        padding-top: 10px;
 
         .heart-checkbox {
             display: none;
@@ -109,10 +111,8 @@
             cursor: pointer;
             background-image: url(../assets/images/images/empty-heart.svg);
             background-repeat: no-repeat;
-            width: 2em;
-            height: 1.5em;
-            bottom: 2.3em;
-            right: 3px;
+            width: 23px;
+            height: 21px;
             transition: transform 450ms, background-image 300ms 150ms;
         }
 
@@ -133,12 +133,11 @@
 
     h2 {
         font-family: $font-title;
-        font-size: 1.75em;
+        font-size: 28px;
         padding-top: 18px;
         margin-bottom: 40px;
         margin-right: 15px;
     }
-
 
     .menu-title {
         display: flex;
@@ -146,14 +145,28 @@
     }
 
     h3 {
-        padding-bottom: 20px;
-        border-bottom: 3px solid $light-green;
-        width: 40px;
+        padding-bottom: 16px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    h3 span {
+        position: relative;
+    }
+
+    h3 span::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        top: 25px;
+        left: 0;
+        width: 50%;
         height: 3px;
-        font-weight: 100;
+        background-color: #99E2D0;
     }
 
     h4 {
+        font-weight: 300;
         padding-bottom: 10px;
         white-space: nowrap;
         overflow: hidden;
@@ -178,11 +191,10 @@
             padding-left: 15px;
             border-radius: 20px;
             width: 100%;
-            //height: 50px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
             position: relative;
 
-            .flex {
+           .flex {
                 p {
                     flex-grow: 2;
                 }
@@ -203,15 +215,15 @@
                 opacity: 0;
             }
 
-            .list img {
-                height: 5em;
-            }
-
             &:hover .check-icon {
                 transition: all 0.8s ease-in-out;
                 transform: translateX(0);
                 margin-left: 0em;
                 opacity: 1;
+            }
+
+            .list img {
+                height: 5em;
             }
         }
     }
@@ -224,11 +236,13 @@ li {
         overflow: hidden;
 
         h4 {
-            font-size: 1.125em;
-            font-style: normal;
-            font-weight: 700;
+            font-weight: 500;
+            font-size: 18px;
         }
-
+p{
+    font-weight: 100;
+    padding-bottom: 5px;
+}
         .meal-name {
             width: 100%;
         }
@@ -238,20 +252,13 @@ li {
             align-items: center;
 
             .price {
-                font-size: 1.125em;
-                font-style: normal;
-                font-weight: 700;
+                font-size: 16px;
+                font-weight: 500;
                 margin-right: 1em;
 
             }
         }
     }
-}
-
-
-p {
-    font-size: 0.875em;
-    font-weight: 300;
 }
 
 .order-button {
@@ -268,21 +275,47 @@ p {
     }
 }
 
+@media (min-width: $tablet) {
+    .block-restaurant {
+        .menu {
+            .menu-title {
+                justify-content: center;
+            }
+        }
+    }
+}
 
 @media (min-width: $desktop) {
+    .header-restaurant {
+        padding: 22px 0px ;
+    
+        a {
+            display: inline;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+    
+        h1 {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+    }
     .block-restaurant {
+
         h2 {
             text-align: center;
         }
-
+        .restaurant-background {
+            min-height: 380px;
+        }
         .menu {
             display: flex;
             flex-direction: column;
-            margin: -30px 180px 0px 180px;
+            margin: -40px 180px 0px 180px;
 
             .menu-title {
                 flex-direction: row;
-                justify-content: center;
                 width: 98%;
             }
 

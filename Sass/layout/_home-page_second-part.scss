@@ -2,16 +2,16 @@
 
 .second-main-part {
     box-sizing: border-box;
-    padding: 0px 30px 0px 20px;
-    height: 450px;
+    height: 360px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 0px 28px 40px 16px;
 
     h2 {
         text-align: left;
         @include title;
-        padding: 20px 25px 30px 0px;
+        padding: 0px 25px 30px 0px;
     }
 
     ol {
@@ -39,18 +39,21 @@
         height: 25px;
         padding-right: 0px;
         font-size: 14px;
-        font-weight: 500;
         color: $color-white;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    span {
-        padding-right: 15px;
-        color: $icone-grey;
-        font-size: 20px;
-        align-content: center;
+    p {
+        font-weight: 500;
+
+        span {
+            padding-right: 15px;
+            color: $icone-grey;
+            font-size: 20px;
+            align-content: center;
+        }
     }
 
     .icone {
@@ -73,7 +76,7 @@
     }
 }
 
-@media (min-width: 1209px) {
+@media (min-width: $large-desktop) {
 
     .second-main-part {
         height: 230px;
