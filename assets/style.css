@@ -248,7 +248,7 @@ body a {
   font-size: 24px;
   font-weight: 500;
   padding: 25px 20px;
-  padding: 0px 25px 30px 0px;
+  padding: 0px 0px 30px 14px;
 }
 .second-main-part ol {
   display: flex;
@@ -306,6 +306,9 @@ body a {
     margin: 0px auto;
     padding: 0 180px;
     max-width: 1330px;
+  }
+  .second-main-part h2 {
+    padding-left: 0px;
   }
   .second-main-part ol {
     max-width: 1023px;
