@@ -229,6 +229,7 @@ body a {
 @media (min-width: 1024px) {
   .first-main-part {
     padding: 36px 0px 28px 0px;
+    margin-bottom: 50px;
   }
   .first-main-part h2 {
     font-size: 40px;
@@ -237,7 +238,6 @@ body a {
 }
 .second-main-part {
   box-sizing: border-box;
-  height: 360px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -302,9 +302,8 @@ body a {
 }
 @media (min-width: 1208px) {
   .second-main-part {
-    height: 230px;
     margin: 0px auto;
-    padding: 0 180px;
+    padding: 0 180px 50px 180px;
     max-width: 1330px;
   }
   .second-main-part h2 {
@@ -773,6 +772,7 @@ footer span {
   width: 100%;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   position: relative;
+  /* Animation check box */
 }
 .block-restaurant ul li .flex p {
   flex-grow: 2;
@@ -789,9 +789,9 @@ footer span {
   margin-left: -4.25em;
   transform: translateX(100%);
   opacity: 0;
+  transition: all 0.8s ease-in-out;
 }
 .block-restaurant ul li:hover .check-icon {
-  transition: all 0.8s ease-in-out;
   transform: translateX(0);
   margin-left: 0em;
   opacity: 1;
